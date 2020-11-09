@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Delete </h1>
+    <form action = {{url_for('delete_one')}} method = "post">
+        <dt>Insert name</dt>
+        <input type=text name=name>
+        <input type = submit value = Confirm>
+    </form>
+
+    <h3>
+        <a href="{{url_for ('home')}}">Home</a>
+    </h3>
+</body>
+</html>

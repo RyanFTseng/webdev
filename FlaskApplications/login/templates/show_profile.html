@@ -1,0 +1,30 @@
+<html>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+{% extends "base.html" %}
+{% block title %} Index {% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+	.important {color: #336699; }
+</style>
+{% endblock %}
+{% block content %}
+<h1>Logged In</h1>
+<p class="important">
+	Welcome
+</p>
+
+
+
+
+
+
+<p>{{ username }}</p>
+<p>{{email}}</p>
+
+
+{% endblock %}
+</html>

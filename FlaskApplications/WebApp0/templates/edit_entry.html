@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{{url_for('edit_entry')}}" method = "post">
+        <dt>Original Name:</dt>
+        <dd><input type=text name=original_name>
+        <dt>Name:
+        <dd><input type=text name=name>
+        <dd><input type = radio name = school value = 'Elementary School'>Elementary school
+        <dd><input type = radio name = school value = 'Middle School'>Middle school
+        <dd><input type = radio name = school value = 'High School'>High school
+        <dd><input type = checkbox name = code value = Python>Python
+        <dd><input type = checkbox name = code value = Java>Java
+        <dd><input type = checkbox name = code value = C++>C++
+        <dd><input type = checkbox name = code value = SQL>SQL
+        <dt>Email:
+        <dd><input type=text name=email>
+        <dt>Phone Number:
+        <dd><input type=text name=phone>
+        <dt>City:
+        <dd><input type=text name=city>
+        <dt>Text:
+        <dd><input type=text name=text>
+        <dd><input type=submit value=Submit></dd>
+    </form>
+    <h3>
+        <a href="{{url_for ('home')}}">Home</a>
+    </h3>
+
+</body>
+</html>

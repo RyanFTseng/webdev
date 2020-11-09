@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+</head>
+<body>
+    <h1>
+        <table border="1" >
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    {% for entry in entries %}
+                        <td>{{entry.name}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>School</td>
+                    {% for entry in entries %}
+                        <td>{{entry.school}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Code</td>
+                    {% for entry in entries %}
+                        <td>{{entry.code}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    {% for entry in entries %}
+                        <td>{{entry.email}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    {% for entry in entries %}
+                        <td>{{entry.phone}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                <tr>
+                    <td>City</td>
+                    {% for entry in entries %}
+                        <td>{{entry.city}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    {% for entry in entries %}
+                        <td>{{entry.text}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </h1>
+
+    <h2>
+        <p>
+            <a href = "{{url_for ('edit_entry')}}">Edit one</a>
+            <a href = "{{url_for ('delete_one')}}">Delete one</a>
+        </p>
+    </h2>
+
+    <h3>
+        <a href="{{url_for ('home')}}">Home</a>
+    </h3>
+
+</body>
+</html>

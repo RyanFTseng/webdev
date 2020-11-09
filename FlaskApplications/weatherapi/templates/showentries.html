@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Home</h1>
+<h1>
+    <table border =1>
+        <tbody>
+            <tr>
+                <td>Observation Location</td>
+                {% for entry in entries %}
+                    <td>{{entry.location}}</td>
+                {% else %}
+                    <p>No data</p>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>Weather</td>
+                {% for entry in entries %}
+                    <td>{{entry.weather}}</td>
+                {% else %}
+                    <p>No data</p>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                {% for entry in entries %}
+                    <td>{{entry.tempstring}}</td>
+                {% else %}
+                    <p>No data</p>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                {% for entry in entries %}
+                    <td>{{entry.humidity}}</td>
+                {% else %}
+                    <p>No data</p>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td>Wind</td>
+                {% for entry in entries %}
+                    <td>{{entry.wind}}</td>
+                {% else %}
+                    <p>No data</p>
+                {% endfor %}
+            <tr>
+                <td>Icon</td>
+                {% for entry in entries %}
+                    {% if "http://icons.wxug.com" in entry.icon %}
+                        <td>
+                            <img src = '{{entry.icon}}'>
+                        </td>
+                    {% else %}
+                        <td>{{entry.icon}}</td>
+                    {%  endif %}
+                {% else %}
+                    <p>No data</p>
+                {% endfor %}
+            </tr>
+            </tr>
+        </tbody>
+    </table>
+</h1>
+</body>
+</html>

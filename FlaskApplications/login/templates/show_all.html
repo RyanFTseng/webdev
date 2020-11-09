@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+</head>
+<body>
+    <h1>
+        <table border="1" >
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    {% for entry in entries %}
+                        <td>{{entry.username}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    {% for entry in entries %}
+                        <td>{{entry.password}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Email</td>
+                     {% for entry in entries %}
+                        <td>{{entry.email}}</td>
+                    {% else %}
+                        <p>No data</p>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+ </h1>
+
+    <h3>
+        <a href="{{url_for ('home')}}">Home</a>
+    </h3>
+
+</body>
+</html>
