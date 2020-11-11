@@ -1,0 +1,55 @@
+<html>     
+<head>
+	<title>index</title>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<script src="main.js"></script>
+</head> 
+
+<body>
+	<h1>computer science</h1>
+	<h2>Clock</h2>
+		<p id ="demo"></p>	
+		<p>computer science</p>
+		<input type="button" value = "click me " onclick="alert('click')">
+		<input id="input1" type = "text">
+
+	<h2>Shrek</h2>
+		<p>click <a href="shrek.html">here</a> to go to Shrek</p>
+	<h3>P1</h3>
+		<p>click <a href="movie.html">here</a> to go to movies</p>
+		<a href = "movie.html"><img src = "/home/pi/ywryantseng/py/imgpr/butterfly.jpg" width ="200" length= "200"</a>
+		<p>click <a href="page1.html">here</a> to go to page 1</p>
+	<span>
+	<h4>Duck</h4> 
+		<img src = "http://www.mapleleaffarms.com/lib/sitefiles/White-Duck_Facing_Front.jpg" width="200" length="200"</a>
+	<h5>Google</h5>
+		<a href= "https://www.google.com"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"</a>
+	<h6>Youngwonks</h6>
+	<a href = "https://www.youngwonks.com"><img src = "https://s3.amazonaws.com/youngwonks/logo.png" width="200" length="200"</a>
+	</span>
+	
+	<script>
+	function display(){
+	var d = new Date();
+	var hours = d.getHours();
+	var minutes = d.getMinutes();
+	var seconds = d.getSeconds();
+	if (hours<11)
+		var x = "am";
+	else
+		var x = "pm";
+	if (hours<10)
+		hours="0"+hours;
+	if (minutes<10)
+		minutes="0"+minutes;
+	if (seconds<10)
+		seconds="0"+seconds;
+	document.getElementById("demo").innerHTML=hours+':'+minutes+':'+seconds+' '+x;
+	}
+	display(); 
+	setInterval(display,1000);
+	</script>
+</body>
+</html>
+
+    

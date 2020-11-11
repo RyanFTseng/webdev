@@ -1,0 +1,27 @@
+<title>Random Guessing Game</title>
+<body>
+	<h2>Random Guessing Game</h2>
+	<p>Guess a number between 1 and 100</p>
+  <form name = "game">
+  <p>
+  <input id = "input" name = "display">
+  <input type = "button" value ="enter" onclick=rng()>
+  </p>
+  </form>
+	<script>
+	  x=Math.floor(Math.random()*100)+1
+    console.log(x)
+	function rng(){
+    if (x==document.game.display.value){
+		document.game.display.value="correct"
+    	}
+	if (x<document.game.display.value){
+		document.game.display.value="too high"
+    	}
+	if (x>document.game.display.value){
+		document.game.display.value="too low"
+    	}
+    }
+	</script>
+</body>
+

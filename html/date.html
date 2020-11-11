@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>date</title>
+<script src = "date.js"></script>
+</head>
+
+<body>
+	<p id ="demo"></p>	
+	<script>;
+		var d = new Date();
+		document.getElementById("demo").innerHTML=d.getHours();
+		console.log(d.getHours());
+		if (13<=d.getHours()<=17)
+		alert("good afternoon");
+		else if (18<=d.getHours()<=20)
+		alert("good evening");
+		else if (21<=d.getHours()>=5)
+		alert("good night");
+		else if (6<=d.getHours()<=12)
+		alert("good morning");
+	</script>
+</body>
+</html>

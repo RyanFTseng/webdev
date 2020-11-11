@@ -1,0 +1,21 @@
+table{
+	font-family:Verdana;
+	color:#23879b;
+	background-color:#DFD3E0;
+	border:5px solid black;
+	border-collapse:collapse;
+	text-align:center
+
+}
+
+tr{
+	border:3px solid black;
+}
+
+td{
+	border:3px solid black;
+}
+
+thead{
+	color:#02B100;
+}

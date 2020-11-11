@@ -1,0 +1,26 @@
+<title>Clock</title>
+<body>
+	<h2>Clock</h2>
+	<p id ="demo"></p>	
+	<script>
+	function display(){
+	var d = new Date();
+	var hours = d.getHours();
+	var minutes = d.getMinutes();
+	var seconds = d.getSeconds();
+	if (hours<11)
+		var x = "am";
+	else
+		var x = "pm";
+	if (hours<10)
+		hours="0"+hours;
+	if (minutes<10)
+		minutes="0"+minutes;
+	if (seconds<10)
+		seconds="0"+seconds;
+	document.getElementById("demo").innerHTML=hours+':'+minutes+':'+seconds+' '+x;
+	}
+	display(); 
+	setInterval(display,1000);
+	</script>
+</body>

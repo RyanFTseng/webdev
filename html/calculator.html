@@ -1,0 +1,56 @@
+<title>Calculator</title>
+
+<body>
+	<h2>Calculator</h2>
+  <form name = "Calculator">
+	<p><input id = "input" name = "display"></p>
+	<p>
+		<input type = "button" value ="7" onclick="document.Calculator.display.value+='7'">
+		<input type = "button" value ="8" onclick="document.Calculator.display.value+='8'">
+		<input type = "button" value ="9" onclick="document.Calculator.display.value+='9'">
+		<input type = "button" value ="+" onclick="add()">
+	</p>
+	<p>
+		<input type = "button" value ="4" onclick="document.Calculator.display.value+='4'">
+		<input type = "button" value ="5" onclick="document.Calculator.display.value+='5'">
+		<input type = "button" value ="6" onclick="document.Calculator.display.value+='6'">
+		<input type = "button" value ="-" onclick="sub()">
+	</p>
+	<p>
+		<input type = "button" value ="1" onclick="document.Calculator.display.value+='1'">
+		<input type = "button" value ="2" onclick="document.Calculator.display.value+='2'">
+		<input type = "button" value ="3" onclick="document.Calculator.display.value+='3'">
+		<input type = "button" value ="*" onclick="mult()">
+	</p>
+	<p>
+		<input type = "button" value ="C" onclick="getElementById('input').value=''">
+		<input type = "button" value ="0" onclick="document.Calculator.display.value+='0'">
+		<input type = "button" value ="=" onclick="calc()">
+		<input type = "button" value ="/" onclick="div()">
+
+  </p>
+  </form>
+	<script>
+      function add(){
+        document.Calculator.display.value+='+'
+      	}
+      function sub(){
+				document.Calculator.display.value+='-'
+            }
+      function mult(){
+				document.Calculator.display.value+='*'
+            }
+      function div(){
+				document.Calculator.display.value+='/'	
+        	}
+          
+      function calc(){
+      document.Calculator.display.value=eval(document.Calculator.display.value)
+			
+          }
+      			
+		
+	</script>
+
+</body>
+
